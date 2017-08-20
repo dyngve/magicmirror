@@ -8,6 +8,10 @@ function getWeather($lon, $lat) {  // stockholm lon = 18, lat = 59
 	print "</pre>";
 }
 
+function getWeatherIcon($data, $time) {
+	$iconNumb = $data['']
+}
+
 getWeather(18, 59);
 
 ?>
