@@ -24,15 +24,26 @@ function getYrXML() {
 	print "<pre>";
 	foreach($xml->forecast->tabular->children() as $child) {
 		//print_r($child);
+<<<<<<< HEAD
 		if ($child['period'] == 3) {
 			// yr.no symbols @ http://om.yr.no/symbol/
+=======
+		//if ($child['period'] == 3) {
+			// yr.no symbols @ http://om.yr.no/symbol/
+			echo "<h3>Period: " . $child['period'] . "<br></h3>";
+>>>>>>> 4561f6bac315878dbac01d993f8066eaaac81bdd
 			echo "Symbol: " . $child->symbol['numberEx'] . "<br>";
 			echo "<img src=\"https://www.yr.no/grafikk/sym/v2016/png/100/" . $child->symbol['var'] . ".png\"><br>";
 			echo "From: " . $child['from'] . "<br>";
 			echo "To:   " . $child['to'] . "<br>";
+<<<<<<< HEAD
 			echo "Period: " . $child['period'] . "<br>";
 			echo "Temp: " . $child->temperature['value'] . "<br><br>";
 		}
+=======
+			echo "Temp: " . $child->temperature['value'] . "<br><br>";
+		//}
+>>>>>>> 4561f6bac315878dbac01d993f8066eaaac81bdd
 	}
 	//print "<pre>";
 	//print_r($xml);
@@ -42,5 +53,10 @@ function getYrXML() {
 $data = getWeather(18, 59);
 getWeatherIcon($data);
 getYrXML();
+<<<<<<< HEAD
+=======
+
+// test bootstrap
+>>>>>>> 4561f6bac315878dbac01d993f8066eaaac81bdd
 
 ?>
